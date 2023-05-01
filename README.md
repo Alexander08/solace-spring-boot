@@ -4,28 +4,25 @@ This repository contains 2 projects:
 - Solace producer
 - Solace consumer
 
-The setup makes use of docker-compose to start a local Solace broker
+The setup makes use of docker-compose to start a local Solace broker.
 
 ## Configuration 
 
 The project is configured like this:
 
-Producer: 
+### Producer: 
 - Is pub/sub
-- will produce messages of type `SomeMessage` or `OtherMessage` and it will publish them to the topic
-```
-  domain.org/SomeMessage/{id}
-  domain.org/OtherMessage/{id}
-```
+- Produce message of type `OtherMessage` on topic `domain.org/OtherMessage/{id}` using JMS
+- Produce message of type `SomeMessage` on topic `domain.org/SomeMessage/{id}` using JCSMP
 
-Consumer:
+### Consumer:
 - listen to the queues
 ```
 "SOME_MESSAGE_QUEUE"
 "OTHER_MESSAGE_QUEUE"
 ```
 
-Broker:
+### Broker:
 - create the queues with subscriptions
 ```
 "SOME_MESSAGE_QUEUE": "domain.org/SomeMessage/>"
