@@ -1,0 +1,16 @@
+server:
+  port: 8082
+  shutdown: graceful
+
+spring:
+  main:
+    banner-mode: off
+
+
+solace:
+  jms:
+    host: solace-broker
+    msg-vpn: default
+    client-username: default
+    client-password: default
+
