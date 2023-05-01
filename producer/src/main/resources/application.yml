@@ -14,3 +14,9 @@ solace:
     client-username: default
     client-password: default
 
+#jcsmp configuration
+  java:
+    host: solace-broker
+    msg-vpn: default
+    client-username: default
+    client-password: default

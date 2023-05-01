@@ -35,6 +35,7 @@ dependencyManagement {
 dependencies {
     implementation 'com.solace.spring.boot:solace-spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
     compileOnly 'org.projectlombok:lombok'
 
